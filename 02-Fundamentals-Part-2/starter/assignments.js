@@ -18,17 +18,17 @@
 // function percentageOfWorld(population) {
 //     return (population / 7900) * 100;
 // }
-// const percentageOfChina = percentageOfWorld(1441)
+//const percentageOfChina = percentageOfWorld(1441)
 // const percentageOfsouthAfrica = percentageOfWorld(46)
 // const percentageOfRussa = percentageOfWorld(144)
-// console.log(`China population percentage ${percentageOfChina}`)
+//console.log(`China population percentage ${percentageOfChina}`)
 // console.log(`South Africa population percentage ${percentageOfsouthAfrica}`)
 // console.log(`Russa popuation percentage ${percentageOfRussa}`)
 
 //function expression
-// const percentageOfWorld = function (population) {
-//     return (population / 7900) * 100;
-// }
+//const percentageOfWorld = function (population) {
+//    return (population / 7900) * 100;
+//}
 // const percentageOfChina = percentageOfWorld(1441)
 // const percentageOfsouthAfrica = percentageOfWorld(46)
 // const percentageOfRussa = percentageOfWorld(144)
@@ -47,6 +47,20 @@
 // console.log(`China has a averege of ${chinaPercentage} and South Africa has ${southAfricapercentage} then Russa is ${russaPercentage}.`)
 
 
+// //✨
+
+// const percentageOfWorld = function (population) {
+//     return (population / 7900) * 100;
+// }
 
 
 
+// const describePopulation = function (country, population) {
+//     const percentage = percentageOfWorld(population);
+//     const description = `${country} has ${population} and ${percentage}`;
+//     return (description);
+// }
+
+// console.log(describePopulation('china', 1441));
+// console.log(describePopulation('South Africa', 46));
+// console.log(describePopulation('Russa', 144));

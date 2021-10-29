@@ -63,6 +63,35 @@
 // console.log(retire);
 
 
-function fruitProcessor(apples, oranges) {
-    const juice = `juice with ${apples} appels and ${oranges} oranges.`;
-    return juice;
+// function cutFruitPieces(fruit) {
+//     return fruit * 4;
+// }
+
+// function fruitProcessor(apples, oranges) {
+//     const applepieces = cutFruitPieces(apples);
+//     const orangepieces = cutFruitPieces(oranges);
+
+//     const juice = `juice with ${applepieces} pieces of appels and ${orangepieces} pieces of oranges.`;
+//     return juice;
+// }
+// console.log(fruitProcessor(2, 0))
+
+// const calcAge = function (birthYear) {
+//     return 2021 - birthYear;
+
+// }
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//     const age = calcAge(birthYear)
+//     const retirement = 65 - age;
+//     const payslips = retirement * 12;
+
+//     if (retirement > 0) {
+//         console.log(`${firstName} will retire in ${retirement} years and only has ${payslips} payslips left .`)
+//         return retirement;
+//     } else {
+//         return -1;
+//     }
+// }
+
+// const retire = yearsUntilRetirement(1979, `Duncan`)
+// console.log(retire);
