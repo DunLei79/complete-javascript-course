@@ -6,11 +6,13 @@ const flights =
 
 // Data needed for first part of the section
 const restaurant = {
-  name: 'Classico Italiano',
+  rname: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  
 
   openingHours: {
     thu: {
@@ -26,4 +28,76 @@ const restaurant = {
       close: 24,
     },
   },
+  
+  order: function(starterIndex, mainIndex){
+    return [this.starterMenu[starterIndex],this.mainMenu[mainIndex]];
+  },
+  orderPasta: function(ing1,ing2,ing3){
+    console.log(`Here is your food with ${ing1} ${ing2} ${ing3} eat up.`);
+  }
 };
+
+const {rname, openingHours, categories} = restaurant;
+//console.log(rname, openingHours, categories);
+
+const {rname: restaurantName,
+       openingHours: hours,
+       categories: tags,
+        } = restaurant;
+        //console.log(restaurant, hours, tags);
+ 
+const{menu = [], starterMenu: starters = []}  = restaurant;
+//console.log(menu, starters);
+
+//✨ mutate variables
+let a = 111;
+let b = 999;
+const obj = {a:23, b:7, c:14};
+({a, b} = obj);
+console.log(a,b);
+
+//✨ nested hours\
+const {fri: {open:o, close:c}} = openingHours
+
+const arr =[ 7,8,9];
+const extra = [1,2,3,...arr];
+console.log(extra)
+console.log(...extra)
+const newMenu = [...restaurant.mainMenu, `braai vleis`];
+console.log(newMenu);
+
+//✨join 2 or more arrays
+
+const menuAll = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(...menuAll);
+
+//✨ iterable:
+// const ingredients = [
+//   prompt(`Let's make pasta what is ingredient 1?`), 
+//   prompt(`and the second incrdient`), 
+//   prompt(`last one pls.`)];
+
+//   restaurant.orderPasta(...ingredients)
+
+  //✨//rest parameters
+  
+  const [x,y,...rest] = [1,2,3,4,5]
+  console.log(x,y,rest)
+
+  
+
+
+// const [starter, main] = restaurant.order(2, 0);
+// console.log(starter ,main)
+
+// const nested =[2,4];
+// // const [i, ,j] = nested;
+// // console.log(i,j);
+// // const [i, ,[j,k]] = nested;
+// // console.log(i,j,k)
+// // console.log(i);
+// // console.log(k);
+
+// // defualt values
+// const[p=1, q=1, r=1] = nested;
+// console.log(p,q,r);
