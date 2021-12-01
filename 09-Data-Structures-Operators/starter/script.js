@@ -1,8 +1,8 @@
 'use strict';
 
 // Data needed for a later exercise
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
 const weekdays = ['mon','thu','wed','thu','fri','sat','sun'];
@@ -41,11 +41,219 @@ const restaurant = {
   }
 };
 
-//✨Looping Ojects
+//✨Strings PART 2 
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-for(const day of Object.keys(openingHours)){
-  console.log(day);
+  
+  for(const line of flights.split('+')){
+   const first = line.toLowerCase().replace(/;/g,' ').replace(/_/g,' ').trim();
+
+   console.log(first)
+ }
+  
+  
+
+
+/////////////////////////////////////////////////
+//✨Strings PART 2 
+/*const airline = `TAP Air Portugal`
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+//real world fix
+const passenger = 'DuNCan';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// use input mail comparing emails.
+const email = 'duncan@yahoo.com'
+const loginEmail = '   DunCaN@YAHoo.com \n';
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmed = lowerEmail.trim();
+
+const fixedEmail = loginEmail.toLowerCase().trim();
+console.log(fixedEmail);
+
+//replacing 
+const priceGB = '288,97%';
+const priceUS = priceGB.replace('%', '$').replace(',','.')
+console.log(priceUS)
+
+const announcement = 'All passenger come to door 23. Boarding door 23.';
+const fixedAnnoucement = announcement.replace(/door/g, 'gate');
+console.log(fixedAnnoucement);
+
+//Booleans
+const plane = 'Air A320neo'
+console.log(plane.includes('A320'));
+console.log(plane.includes('boeing'));
+console.log(plane.startsWith('Air' ));
+
+if(plane.startsWith('Air')&&plane.endsWith('neo')){
+  console.log('Part of thr new Airbus line')
+};
+
+//Practice
+
+const checkBaggage = function(items){
+  const baggage = items.toLowerCase();// first step to get everyting and compare from the one standard.
+  if(baggage.includes('knife') || baggage.includes('gun')){
+    console.log("You cant board the plane")
+  }else {
+    console.log('safe journey')
+  }
+};
+
+checkBaggage('I have A Laptop And a pocket Knife.');
+checkBaggage('Socks and camerA');
+checkBaggage('Got same snakes and a gun for protection');
+*/
+
+/*
+///////////////////////////////////
+//✨Strings PART1 
+
+const airline = `TAP Air Portugal`
+const plane = `A320`
+
+console.log(plane[0])
+console.log(plane[1])
+console.log(plane[2])
+console.log(`b373`[0])
+console.log(airline.length)
+console.log(`b737`.length)
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));// lasst R in srting
+console.log(airline.indexOf('Portugal'))//word search 
+
+console.log(airline.slice(4));//split string
+console.log(airline.slice(4,7));//split string last -begining 7-4 in this case
+
+console.log(airline.slice(0, airline.indexOf(' ')))//lookin at the first space index  
+console.log(airline.slice(airline.lastIndexOf(' ') + 1))//looking at the last space in the string, +1 is to remive space.
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1,-1));
+
+const checkMiddleSeat = function(seat){
+const s = seat.slice(-1);
+if (s === 'B' || s === 'E'){
+  console.log('You have the midde;😢')
+} else{
+  console.log('Lucky window seat😁')
 }
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+*/
+
+//////////////////////////////////////////////////////
+// ✨const question = new Map([
+//   ['question','What is the best programming language in the world?'],
+//   [1, 'c'],
+//   [2, 'java'],
+//   [3,'Java Script'],
+//   ['correct', 3],
+//   [true,'Correct'],
+//   [false,'Incorrect'],
+// ]);
+// console.log(question);
+
+// //convert Object to map
+// const hoursMap =new Map(Object.entries(openingHours));
+// console.log(hoursMap);
+
+
+// //quiz App
+// console.log(question.get('question'))
+// for (const [key, value] of question){
+//   if (typeof key === 'number')console.log(`Answer ${key}:${value}`)
+// };
+
+// const answer = Number(prompt(`your answer`));
+// console.log(answer)
+
+// answer === 3 ?console.log(question.get(true)): console.log(question.get(false));
+// //convert map to array
+// console.log([...question]);
+// console.log([question.entries()]);
+
+  
+//////////////////////////////////////////////////////////
+// //✨Maps
+
+// const rest = new Map();
+// rest.set('name', 'Duncan Leite');
+// rest.set(1, 'windhoek,  namibia');
+// rest.set(2, 'CPT, South africa');
+
+// rest
+// .set('categories',['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+// .set('open', 11)
+// .set('close',23)
+// .set(true, 'We are open')
+// .set(false, 'We are open');
+
+// console.log(rest.get('open'))
+// console.log(rest.get(true))
+// console.log(rest.get('name'))
+// console.log(rest.get(2))
+
+// const time = 21;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('closed')));
+
+// console.log(rest.has('categories'))
+// rest.delete(1);
+// console.log(rest.size);
+// rest.set([1,2],'test');
+// console.log(rest);
+
+
+/////////////////////////////////////
+//✨Sets
+
+// const orderSet = new Set(['pasta','pizza', 'pizza', 'pasta','pasta','risotto']);
+// console.log(orderSet)
+// console.log(orderSet.size)
+// console.log(orderSet.has('pizza'))
+// console.log(orderSet.has('bread'))
+// orderSet.add('toast')
+// orderSet.delete('pasta')
+// console.log(orderSet) 
+
+
+/////////////////////////////////
+//✨Looping Ojects
+//Property NAMES
+
+// const properties = Object.keys(openingHours);
+// console.log(properties);
+
+// let openStr = `We are ${properties.length} days a week-`;
+// for(const day of properties){
+//   openStr += `${day},`;
+  
+// }
+// console.log(openStr);
+
+// //✨Property VALUES
+// const values  = Object.values(openingHours);
+// console.log(values);
+
+// //✨Entire Object
+// const entries = Object.entries(openingHours);
+// console.log(entries);
+
+// for (const [key, {open, close}]of entries){
+//   console.log(`On ${key} we are open at ${open} and close on ${close}.`);
+// }
+
+
 
 ////////////////////////////////////////////////////////
 
@@ -65,7 +273,7 @@ for(const day of Object.keys(openingHours)){
   //   console.log(`On ${day} we are ${open}`)
   // };
 
-  // //methods
+  //methods
   // console.log(restaurant.order?.(0,1) ?? 'Does not exist');  // ? will check if it exsits.
   // console.log(restaurant.ordertest?.(0,1) ?? 'Does not exist');
 
